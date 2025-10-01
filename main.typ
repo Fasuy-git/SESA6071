@@ -61,6 +61,7 @@
 
 #show heading: set block(below: 1.2em)
 #set par(spacing: 1.5em)
+#set figure(gap: 1.5em)
 
 // Contents Page
 #align(left)[
