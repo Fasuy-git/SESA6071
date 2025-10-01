@@ -64,3 +64,5 @@ Instead of grouping together rocket propulsion methods using the energy source, 
 - *High Performance:* Typically have the cost of *low thrust* and use *electrical* propulsion methods.
 
 - *Balanced Thrust and Performance:* Typically the middle ground is *nuclear thermal*.
+
+#pagebreak()
