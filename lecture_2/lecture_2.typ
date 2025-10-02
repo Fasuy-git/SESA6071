@@ -111,5 +111,49 @@ Combustion as shown in *@2-combustion-equation* nis an exothermic reaction as th
   caption: [Respective bond energies of reactants and products in combustion.],
 )<2-bond-energies>
 
-Note that there are two bond energies in *@2-bond-energies* due to the #ce("OH") and the #ce("OH - H") bonds. The maximum energy can be calculated
+Note that there are two bond energies in *@2-bond-energies* due to the #ce("OH") and the #ce("OH - H") bonds. The maximum energy can be calculated and are shown in *@2-max-chem-energy-calcs*.
 
+#figure(
+  image("images/max-chem-energy.png", width: 70%),
+  caption: [Calculations for maximum chemical rocket engine performance],
+  supplement: [Figure],
+  kind: figure,
+)<2-max-chem-energy-calcs>
+
+Note that in this calculation, the bond energy of oxygen is halved as per *@2-combustion-equation* and the equation for effective exhaust velocity comes from the kinetic energy equation and noting that $E_(k g) = E n e r g y "/" m a s s$.
+
+== Comparative Electric Performance
+
+To compare the efficiency of chemical propulsion to electric propulsion consider an electrostatic propulsion system shown in *@2-electrostatic-propulsion-system*.
+
+#figure(
+  image("images/electrostatic-propulsion-system.png", width: 50%),
+  caption: [Basic principle of an electrostatic propulsion system.],
+  supplement: [Figure],
+  kind: figure,
+)<2-electrostatic-propulsion-system>
+
+
+A charged ion (assumed for these calculations to be a water ion) enters an electric field which causes it be accelerated to the more negative (lower potential plate). By setting the electric potential energy gained by the ion equal to the kinetic energy ($eta E_p = E_k$) then the $I_(s p)$ can be calculated, shown in *@2-electrostatic-performance-calcs*.
+
+#figure(
+  image("images/comparitive-electrical-performance-calc.png", width: 70%),
+  caption: [Comparative electrical propulsion system voltage calculations.],
+  supplement: [Figure],
+  kind: figure,
+)<2-electrostatic-performance-calcs>
+
+As shown in *@2-electrostatic-performance-calcs* the voltage required to match the performance of a chemical system is very low and easily achievable, in reality electrostatic systems can achieve efficiencies in excess of 10,000s.
+
+== Nuclear Performance
+
+To estimate the performance of a thermal nuclear rocket engine, Uranium-235 fission is considered, where the energy released in one fission event is immediately transferred to a water molecule, this calculation is shown in *@2-nuclear-performance-calcs*.
+
+#figure(
+  image("images/max-nuclear-energy-calc.png", width: 70%),
+  caption: [Maximum nuclear thermal propulsive system performance.],
+  supplement: [Figure],
+  kind: figure,
+)<2-nuclear-performance-calcs>
+
+Note that this $I_(s p)$ is a theoretical upper limit and in reality the true performance is much lower and is limited by material limits due to heat.
