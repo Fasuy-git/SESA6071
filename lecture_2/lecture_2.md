@@ -76,7 +76,7 @@ Typical $I_(s p)$ values for the rocket engine types defined in the previous lec
     ),
     align: center + horizon,
     [*Rocket Engine Type*], [*$I_(s p) (s)$*],
-    [Chemical Using #ce("H2/O2")], [450],
+    [Chemical Using $H_2 "/" O_2$], [450],
     [Solid], [260],
     [Cold Gas], [70],
     [Gridded Ion Thruster], [3000],
@@ -92,24 +92,4 @@ $
   #ce("H2 + 1/2 O2 -> H2O + Energy")
 $<2-combustion-equation>
 
-Combustion as shown in *@2-combustion-equation* nis an exothermic reaction as the energy of the reactants is more than the energy of the products, allowing for an excess of energy after the reaction. To estimate an effective upper limit to the energy released during combustion, the bond energies shown in *@2-bond-energies* can be used.
-
-#figure(
-  table(
-    columns: 2,
-    fill: (col, row) => (
-      if row == 0 {
-        gray
-      } else { white }
-    ),
-    align: center + horizon,
-    [*Chemical*], [*Bond Energy ($k J "/" m o l$)*],
-    [#ce("H2")], [436],
-    [#ce("O2")], [498],
-    table.cell(rowspan: 2, [#ce("H2O")]), [428], [498.7],
-  ),
-  caption: [Respective bond energies of reactants and products in combustion.],
-)<2-bond-energies>
-
-Note that there are two bond energies in *@2-bond-energies* due to the #ce("OH") and the #ce("OH - H") bonds. The maximum energy can be calculated
-
+// Add section on how energy is released as this is an exothermic reaction
