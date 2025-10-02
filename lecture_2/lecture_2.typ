@@ -68,18 +68,20 @@ Typical $I_(s p)$ values for the rocket engine types defined in the previous lec
 
 #figure(
   table(
-    columns: 2,
+    columns: 5,
     fill: (col, row) => (
       if row == 0 {
         gray
       } else { white }
     ),
     align: center + horizon,
-    [*Rocket Engine Type*], [*$I_(s p) (s)$*],
-    [Chemical Using #ce("H2/O2")], [450],
-    [Solid], [260],
-    [Cold Gas], [70],
-    [Gridded Ion Thruster], [3000],
+    table.header[*Rocket Engine Type*][*$I_(s p) (s)$*][*Thrust (N)*][*Efficiency*][*Propellent*],
+    [Chemical bi-propellent], [200 - 450], [$lt.eq 10 M N$], [0.8], [Liquid or Solid Propellents],
+    [Chemical mono-propellent], [150 - 250], [0.03 - 100], [0.9], [#ce("N2H4")],
+    [Thermal Nuclear Fission], [500 - 860], [$lt.eq 10 M N$], [0.5], [#ce("H2")],
+    [Resistojet - electrothermal], [150 - 350], [0.01 - 10], [0.4], [#ce("N2H4 , NH3 , H2")],
+    [Ion Thruster - electrostatic], [1500-8000], [$10^(-5) - 0.5$], [0.65], [#ce("Xe")],
+    [Hall Effect Thruster], [1500-2000], [$10^(-5) - 2$], [0.55], [#ce("Xe")],
   ),
   caption: [Typical values of $I_(s p)$],
 )<2-typical-isp>
@@ -114,7 +116,7 @@ Combustion as shown in *@2-combustion-equation* nis an exothermic reaction as th
 Note that there are two bond energies in *@2-bond-energies* due to the #ce("OH") and the #ce("OH - H") bonds. The maximum energy can be calculated and are shown in *@2-max-chem-energy-calcs*.
 
 #figure(
-  image("images/max-chem-energy.png", width: 70%),
+  image("images/max-chem-energy.png"),
   caption: [Calculations for maximum chemical rocket engine performance],
   supplement: [Figure],
   kind: figure,
@@ -137,7 +139,7 @@ To compare the efficiency of chemical propulsion to electric propulsion consider
 A charged ion (assumed for these calculations to be a water ion) enters an electric field which causes it be accelerated to the more negative (lower potential plate). By setting the electric potential energy gained by the ion equal to the kinetic energy ($eta E_p = E_k$) then the $I_(s p)$ can be calculated, shown in *@2-electrostatic-performance-calcs*.
 
 #figure(
-  image("images/comparitive-electrical-performance-calc.png", width: 70%),
+  image("images/comparitive-electrical-performance-calc.png"),
   caption: [Comparative electrical propulsion system voltage calculations.],
   supplement: [Figure],
   kind: figure,
@@ -150,10 +152,38 @@ As shown in *@2-electrostatic-performance-calcs* the voltage required to match t
 To estimate the performance of a thermal nuclear rocket engine, Uranium-235 fission is considered, where the energy released in one fission event is immediately transferred to a water molecule, this calculation is shown in *@2-nuclear-performance-calcs*.
 
 #figure(
-  image("images/max-nuclear-energy-calc.png", width: 70%),
+  image("images/max-nuclear-energy-calc.png"),
   caption: [Maximum nuclear thermal propulsive system performance.],
   supplement: [Figure],
   kind: figure,
 )<2-nuclear-performance-calcs>
 
 Note that this $I_(s p)$ is a theoretical upper limit and in reality the true performance is much lower and is limited by material limits due to heat.
+
+== Definitions and Fundamentals Cont.
+
+For propulsion systems, efficiency can be defined in terms of the fraction of source power that is converted to jet power, this efficiency is shown in *@2-electric-propulsion-efficiency*.
+
+$
+  eta_T = ( accent(m, dot) c^2) / (2 P_(i n) ) \
+  P_(i n) = (accent(m, dot) c^2)/(2 eta_T) = (F c)/(2 eta_T) \
+  P_(i n) / m = F / m c / (2 eta_T) = a c/(2 eta_T)
+$<2-electric-propulsion-efficiency>
+
+Where:
+
+- *$eta_T$*: Power conversion efficiency
+- *$P_(i n)$*: Input or Source power ($W$)
+- *$a$*: Acceleration ($m "/" s^2$)
+- *$m$*: Spacecraft mass ($k g$)
+
+Note that for electrical systems $P_(i n)$, the power must come from a source e.g., solar panel array. *@2-electric-propulsion-efficiency* Also shows that *for a fixed specific power:* ($P_(i n) / m$) *a high effective exhaust speed* ($c$) *means a low acceleration.* It is also useful to define a specific power plant mass as shown in *@2-specific-powerplant-mass*.
+
+$
+  alpha = M_(p o w) / P_(i n)
+$<2-specific-powerplant-mass>
+
+Where:
+
+- *$alpha$*: Specific power plant mass ($k g"/"W$)
+- *$M_(p o w)$*: Power plant mass ($k g$)
