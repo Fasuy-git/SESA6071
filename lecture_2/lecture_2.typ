@@ -172,10 +172,13 @@ $<2-electric-propulsion-efficiency>
 
 Where:
 
-- *$eta_T$*: Power conversion efficiency
-- *$P_(i n)$*: Input or Source power ($W$)
-- *$a$*: Acceleration ($m "/" s^2$)
-- *$m$*: Spacecraft mass ($k g$)
+#table(
+  columns: (1fr, 1fr),
+  stroke: 0em,
+  align: left + horizon,
+  [- *$eta_T$*: Power conversion efficiency], [- *$P_(i n)$*: Input or Source power ($W$)],
+  [- *$a$*: Acceleration ($m "/" s^2$)], [- *$m$*: Spacecraft mass ($k g$)],
+)
 
 Note that for electrical systems $P_(i n)$, the power must come from a source e.g., solar panel array. *@2-electric-propulsion-efficiency* Also shows that *for a fixed specific power:* ($P_(i n) / m$) *a high effective exhaust speed* ($c$) *means a low acceleration.* It is also useful to define a specific power plant mass as shown in *@2-specific-powerplant-mass*.
 
@@ -187,3 +190,60 @@ Where:
 
 - *$alpha$*: Specific power plant mass ($k g"/"W$)
 - *$M_(p o w)$*: Power plant mass ($k g$)
+
+By manipulating equations *@2-specific-powerplant-mass* and *@2-electric-propulsion-efficiency*, as well as assuming that $eta_T approx 1$ and $M_(p o w) approx 0.1m$ then the acceleration can be written as *@2-emperical-acceleration-formula*.
+
+$
+  a = 0.2 / (alpha c) #h(1em) cases(M_(p o w) approx 0.1m, eta_T approx 1)
+$<2-emperical-acceleration-formula>
+
+*@2-emperical-acceleration-formula* shows that $a$ and $c$ are inversely proportional from one another, meaning a high acceleration will typically mean a low effective exhaust velocity and vice versa. A showing how performance varies with acceleration is shown in *@2-accel-against-isp*.
+
+#figure(
+  image("images/accel-isp-plot.png", width: 80%),
+  caption: [Variation of spacecraft acceleration against performance.],
+  supplement: [Figure],
+  kind: figure,
+)<2-accel-against-isp>
+
+Note that for electrical propulsion systems shown in *@2-accel-against-isp* a higher $I_(s p)$ means a lower acceleration as $I_(s p) prop c prop 1/a$. Different power sources have different values of $alpha$, for example:
+
+- Nuclear Reactors $=> 2 k g "/" k W$
+- Solar Panels $=> 20 k g "/" k W$
+- RTGs $=> 200 k g "/" k W$
+
+== Thrust Fundamentals
+
+By apply Newton's second law to a rocket nozzle, considering the difference the atmospheric and exhaust pressure as well as using the equations derived in the previous sections, *@2-thrust-equations* can be derived.
+
+$
+  F = accent(m, dot) v_e + (P_e - P_a)A_e \
+  c = v_e + ((P_e - P_a)A_e)/accent(m, dot) \
+  I_(s p) = 1/g_0(v_e + ((P_e - P_a)A_e)/accent(m, dot))
+$<2-thrust-equations>
+
+Where:
+#table(
+  columns: (1fr, 1fr),
+  stroke: 0em,
+  align: left + horizon,
+  [- *$v_e$*: Exhaust velocity ($m "/" s$)], [- *$P_e$*: Exhaust Pressure ($P a$)],
+  [- *$A_e$*: Exhaust Area ($m^2$)], [- *$P_a$*: Atmospheric Pressure ($P a$)],
+)
+
+One key thing to note about *@2-thrust-equations* is that the thrust is made up of two parts, the first part being the *momentum thrust* accounting for the majority of the thrust (90-70%) and the second part is the *pressure thrust* (10-30%).
+
+Crucially, as $P_a (h)$ then the $I_(s p) "and" c$ vary with the height, typically being lower at lower altitudes and increasing up an reaching their maximums in the thinner sections of the atmosphere.
+
+Another impartial performance parameter for chemical rockets which does not depend on the altitude is shown in *@2-characteristic-velocity-equation*.
+
+$
+  c^"*" = (P_c A_t )/accent(m, dot)
+$<2-characteristic-velocity-equation>
+
+Where:
+- *$c^"*"$*: Characteristic velocity ($m "/" s$)
+- *$P_c$*: Chamber pressure ($P a$)
+- *$A_t$*: Throat area ($m^2$)
+
+Typical values of $c^"*"$ are 1500 m/s for a solid rocket and 2500 for #ce("H2/O2") liquid bi-propelled rocket.

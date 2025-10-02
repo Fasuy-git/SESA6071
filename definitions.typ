@@ -13,6 +13,10 @@
   [*$c$*], [Effective exhaust velocity ($m "/" s$)], [*$eta_T$*], [Power Conversion Efficiency],
   [*$P_(i n)$*], [Input Power ($W$)], [*$m$*], [Spacecraft or launch vehicle mass ($k g$)],
   [*$alpha$*], [Specific power plant mass ($k g"/"W$)], [*$M_(p o w)$*], [Power plant mass ($k g$)],
+  [*$v_e$*], [Exhaust velocity ($m"/"s$)], [*$P_e$*], [Exhaust pressure ($P a$)],
+  [*$P_a$*], [Atmospheric pressure ($P a$)], [*$A_e$*], [Exhaust area ($m^2$)],
+  [*$c^"*"$*], [Characteristic velocity ($m"/"s$)], [*$P_c$*], [Chamber pressure ($P a$)],
+  [*$A_t$*], [Throat area ($m^2$)],
 )
 
 #pagebreak()
