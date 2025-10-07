@@ -247,3 +247,35 @@ Where:
 - *$A_t$*: Throat area ($m^2$)
 
 Typical values of $c^"*"$ are 1500 m/s for a solid rocket and 2500 for #ce("H2/O2") liquid bi-propelled rocket.
+
+== Tsiolkovsy Rocket equation
+
+One way to represent the quantity of propellent to the structure of the rocket is by using the *propellent mass fraction* shown in *@2-mass-fraction*.
+
+$
+  mu = M_P/M_0
+$<2-mass-fraction>
+
+Where:
+- *$mu$*: Mass fraction
+- *$M_P$*: Propellent mass ($k g$)
+- *$M_0$*: Structure Mass ($k g$)
+
+For a well designed rocket $mu approx 0.8 - 0.85$. The famous rocket equation is derived by starting with Newtons second law and considering the momentum of the fuel leaving the engine and integrating that equation, this yields .
+
+$
+  Delta V = c ln(M_0/M_f) = I_(s p) g_0 ln(M_0/M_f)
+$
+
+Where:
+- *$Delta V$*: Change in velocity ($m "/" s$)
+- *$M_f$*: Final mass ($k g$)
+
+The $Delta V$ and the $M_0 "/" M_f$ are plotted against one another in *@2-delta-v-plot*. Note that for a single stage rocket $M_0 "/" M_f approx 20$ and the $Delta V$ required to reach LEO is 9.5 km/s and so a single stage to rocket is on the boundary of being possible using a chemical bi-propellent rocket.
+
+#figure(
+  image("images/delta-v-plot.png", width: 60%),
+  caption: [Plot of $Delta V$ against $M_0 "/" M_f$],
+  supplement: [Figure],
+  kind: figure,
+)<2-delta-v-plot>

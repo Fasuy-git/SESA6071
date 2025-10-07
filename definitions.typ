@@ -16,7 +16,9 @@
   [*$v_e$*], [Exhaust velocity ($m"/"s$)], [*$P_e$*], [Exhaust pressure ($P a$)],
   [*$P_a$*], [Atmospheric pressure ($P a$)], [*$A_e$*], [Exhaust area ($m^2$)],
   [*$c^"*"$*], [Characteristic velocity ($m"/"s$)], [*$P_c$*], [Chamber pressure ($P a$)],
-  [*$A_t$*], [Throat area ($m^2$)],
+  [*$A_t$*], [Throat area ($m^2$)], [*$Mu$*], [Mass fraction],
+  [*$M_0$*], [Initial mass ($k g$)], [*$M_P$*], [Propellent mass ($k g$)],
+  [*$M_f$*], [Fuel mass ($k g$)], [*$Delta V$*], [Change in velocity ($m "/" s$)],
 )
 
 #pagebreak()
