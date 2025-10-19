@@ -2,7 +2,7 @@
 
 #lecture("Lecture 1", 1, 1)
 
-== What is rocket propulsion ?
+== What is Rocket Propulsion ?
 
 Propulsion itself is the *act of changing the motion of a body*, typically by using newtons third law and it can be classified in various types of ways. A more colloquial way of defining rocket propulsion is as *mass drivers*, throwing out mass one way to yield an acceleration in the other.
 

@@ -248,7 +248,7 @@ Where:
 
 Typical values of $c^"*"$ are 1500 m/s for a solid rocket and 2500 for #ce("H2/O2") liquid bi-propelled rocket.
 
-== Tsiolkovsy Rocket equation
+== Tsiolkovsy Rocket Equation
 
 One way to represent the quantity of propellent to the structure of the rocket is by using the *propellent mass fraction* shown in *@2-mass-fraction*.
 
