@@ -231,3 +231,5 @@ Finally, *@3-mass-flow-rate-Tt-rhot* and *@3-mass-flow-rate-velocity-throat* can
 $
   accent(m, dot) = (A_t rho_c k) / sqrt((k R T_c)/(W)) sqrt((2/(k+1))^((k+1)/(k-1)))
 $<3-mass-flow-rate-complex>
+
+#pagebreak()
