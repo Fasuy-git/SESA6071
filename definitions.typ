@@ -19,6 +19,18 @@
   [*$A_t$*], [Throat area ($m^2$)], [*$Mu$*], [Mass fraction],
   [*$M_0$*], [Initial mass ($k g$)], [*$M_P$*], [Propellent mass ($k g$)],
   [*$M_f$*], [Fuel mass ($k g$)], [*$Delta V$*], [Change in velocity ($m "/" s$)],
+  [*$alpha$*], [Angle of attack ($degree "or rad"$)], [*$δ$*], [Gimbal angle ($degree "or rad"$)],
+  [*$gamma$*], [Flight path angle ($degree "or rad"$)],
+
+  [*$θ$*], [Pitch angle ($degree "or rad"$)], [*$D$*], [Drag (N)],
+  [*$c_p$*],
+  [Specific heat at a constant pressure ($J"/"k g K$)],
+  [*$c_v$*],
+  [Specific heat at a constant volume ($J"/"k g K$)],
+
+  [*$θ$*], [Pitch angle ($degree "or rad"$)], [*$D$*], [Drag (N)],
+  [*$c_p$*], [Specific heat at a constant pressure ($J"/"k g K$)], [*$C_F$*], [Coefficient of thrust],
+  [*$h$*], [Enthalpy ($J "/" "mol"$)], [*$k$*], [Ratio or specific heats],
 )
 
 #pagebreak()

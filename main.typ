@@ -40,11 +40,11 @@
   ],
   footer: context [
     #align(center)[
-      #box(height: 14pt)[#v(0.35cm) #line(length: 45%)]
+      #box(height: 14pt)[#v(0.35cm) #line(length: 43%)]
       #h(0.569cm)
       #counter(page).display("1")
       #h(0.569cm)
-      #box(height: 14pt)[#v(0.35cm) #line(length: 45%)]
+      #box(height: 14pt)[#v(0.35cm) #line(length: 43%)]
     ]
   ],
 )
@@ -67,6 +67,13 @@
   #v(1cm)
 
   #outline(
+    title: [List of Weeks],
+    target: figure.where(kind: "week"),
+  )
+
+  #v(1cm)
+
+  #outline(
     title: [List of Figures],
     target: figure.where(kind: figure),
   )
@@ -77,6 +84,8 @@
     title: [List of Tables],
     target: figure.where(kind: table),
   )
+
+
 
   #pagebreak()
 
@@ -91,5 +100,5 @@
 #set math.vec(delim: "[")
 
 #include "lecture_1/lecture_1.typ"
-
 #include "lecture_2/lecture_2.typ"
+#include "lecture_3/lecture_3.typ"
