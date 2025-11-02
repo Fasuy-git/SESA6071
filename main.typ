@@ -93,6 +93,7 @@
 
 #include "definitions.typ"
 
+#show figure: set block(breakable: true)
 #show: equate.with(breakable: true, sub-numbering: true)
 #set math.equation(numbering: "(1.1)", supplement: [Eq.])
 #set heading(numbering: "1.")
@@ -103,3 +104,4 @@
 #include "lecture_2/lecture_2.typ"
 #include "lecture_3/lecture_3.typ"
 #include "lecture_4/lecture_4.typ"
+#include "lecture_5/lecture_5.typ"

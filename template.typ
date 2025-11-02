@@ -4,6 +4,8 @@
 
 #import "@preview/typsium:0.3.0": *
 
+#import "@preview/cetz:0.4.2"
+
 #let lecture(title, level, week-num) = {
   // Define week tag box
   let week-tag = box(
