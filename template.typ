@@ -6,6 +6,8 @@
 
 #import "@preview/cetz:0.4.2"
 
+#import "@preview/alchemist:0.1.8": *
+
 #let lecture(title, level, week-num) = {
   // Define week tag box
   let week-tag = box(
