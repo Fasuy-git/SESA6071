@@ -8,6 +8,10 @@
 
 #import "@preview/alchemist:0.1.8": *
 
+#import "@preview/numty:0.0.5" as nt
+
+#import "@preview/typsium-ghs:0.1.0": *
+
 #let lecture(title, level, week-num) = {
   // Define week tag box
   let week-tag = box(
