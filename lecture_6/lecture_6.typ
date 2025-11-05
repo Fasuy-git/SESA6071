@@ -770,4 +770,20 @@ In this cycle, the turbines are driven by the fuel which is used to cool the noz
   kind: figure,
 )
 
-// When you get to regenerative cooling , mention specific heat and specific vaporization as this is how much energy can get dumped into the fuel/oxidizers
+=== Pump Driven Propellent Systems: Alternative Cycles
+
+One alternative cycle used in pump driven systems is *battery powered*. In this system, batteries drive the turbopumps instead of combustion of the propellent and oxidizer, saving on complexity. An example of this cycle is shown in *@6-battery-powered-systems*.
+
+#figure(
+  grid(
+    columns: 2,
+    column-gutter: 0.1cm,
+    [#image("images/6-battery-powered-schematic.png", width: 70%)], [#image("images/6-rutherford.png", width: 60%)],
+  ),
+  caption: [Battery powered propellent feed system schematic [Left], Rutherford engine which uses batter powered propellent feed system [Right].],
+  supplement: [Figure],
+  kind: figure,
+)<6-battery-powered-systems>
+
+
+#pagebreak()
