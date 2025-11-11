@@ -247,7 +247,7 @@ On the right of *@8-solid-performance*, there is a graph which shows the perform
 
 #pagebreak()
 
-== Real Solid Propellant makeups
+== Real Solid Propellant Makeup
 
 The realistic makeup of a double base, composite and hybrid double base composite solid fuel are shown in *@8-solid-makeup*.
 
@@ -288,3 +288,92 @@ The realistic makeup of a double base, composite and hybrid double base composit
 )<8-solid-makeup>
 
 Note that *Diethyl phthalate* is a plasticizer which is added to the double base to allow for easier moulding. *Carbon black* is added in small quantities as an opacifier to make the grain darker and thus reduce radiative heating. *Candelilla wax* is added to make it easier for the grain to escape the mould.
+
+== Solid Propellent Flame Structure
+
+Double base solid rocket fuels feature the fuel and oxidizer bound together on the same molecule allowing for a smokeless clean burn. However for composite fuels, the oxidizer is separate from the fuel leading to a much more chaotic and uncontrolled burn, these effects are depicted in *@8-flame-structures*.
+
+#figure(
+  grid(
+    columns: 2,
+    column-gutter: 0.1cm,
+    [#image("images/8-double-base-burn.png", height: 25%)], [#image("images/8-coomposite-burn.png", height: 25%)],
+    [#image("images/8-real-double-base-burn.png", width: 100%)],
+    [#image("images/8-real-composite-burn.png", height: 12%)],
+  ),
+  caption: [Double base fuel flame structure [Top Left], Composite fuel flame structure [Top Right], Real double base flame [Bottom Left], Real composite flame structure [Bottom Right]],
+  supplement: [Figure],
+  kind: figure,
+)<8-flame-structures>
+
+== Solid Rocket Ignition Systems
+
+For different scales of solid rocket motor there exists two different types of ignition systems, these are explained below and shown visually in *@8-ignitors>*.
+
+- *Pyrotechnic Ignitor*: Generate a hot flame via explosives or energetic propellant-like formulations.
+- *Pyrogenic Ignitor*: Essentially a small solid rocket motor optimized for heat not thrust.
+
+#figure(
+  grid(
+    columns: 2,
+    column-gutter: 0.1cm,
+    [#image("images/8-pyrotechnic.png", height: 25%)], [#image("images/8-pyrogenic.png", height: 25%)],
+  ),
+  caption: [Pyrotechnic ignitor [Left], pyrogenic ignitor [Right]],
+  supplement: [Figure],
+  kind: figure,
+)<8-ignitors>
+
+For pyrotechnic ignitors, an initial arc may combust a squib, which then combusts a booster or intermittent charge (made from a excitable solid fuel formulation) which then ignites a basket of fuel (disks of solid rocket fuel) which is then vented into a solid rocket motor. for pyrogenic ignitors, a pyrotechnic ignitor first ignites a small solid rocket motor optimized for heat which is exhausted into the main solid rocket motor.
+
+
+== Hybrid rockets
+
+A hybrid rocket is a combination of a bipropellent liquid and solid rocket. A typical hybrid rocket consists of a liquid oxidizer with a solid fuel. The inverse configuration does exist but is rarely used. An image depicting the key components of a solid rocket motor are shown in *@8-hybrid-overview*.
+
+#figure(
+  image("images/8-hybrid-overview.png", width: 80%),
+  caption: [System level diagram of a hybrid solid rocket motor.],
+  supplement: [Figure],
+  kind: figure,
+)<8-hybrid-overview>
+
+=== Advantages of Hybrid Rockets
+
+Some key advantages of hybrid rockets over liquid bipropellent rockets and solid rockets are listed below. The performance of all three rocket motor types is shown in *@8-hybrid-performance-comparison*.
+
+- Safer and relatively simpler than liquid bi-propellant and solid rockets.
+- Has start, stop and throttling capabilities which are not present on solid rockets.
+- Have a higher $I_(s p)$ than solid rocket motors.
+
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => (
+      if row == 0 {
+        gray
+      } else { white }
+    ),
+    align: center + horizon,
+    table.header[*Type*][*$I_(s p)$ at Sea Level*][*Thrust Range $(N)$*],
+    [Solid], [< 250s], [$lt.eq 10^7$],
+    table.cell(rowspan: 2, [Liquid bipropellent]),
+    [#ce("H2")/#ce("LOX"): 380s], table.cell(rowspan: 2, [$lt.eq 10^7$]),
+    [RP1/#ce("LOX"): 300s],
+    [Hybrid], [300s], [$lt.eq 10^6$],
+  ),
+  caption: [Comparative performance of liquid bipropellent, solid and hybrid rockets.],
+)<8-hybrid-performance-comparison>
+
+
+=== Disadvantages of Hybrid Rockets
+
+Some key disadvantages of hybrid rockets over liquid bipropellent rockets and solid rockets are listed below. Note that the biggest problem with hybrid rockets are the low fuel regression rates.
+
+- No independent control of fuel mass flow rate which effects combustion.
+- O/F mixture ratio (and performance) may vary due to variable *fuel regression rate* (typically < 1mm/sec, which limits thrust).
+- Poorly known or understood due to small number of examples.
+- Typically lower performance than for liquid bipropellant.
+- Prone to large-amplitude, low-frequency pressure fluctuations (chugging) and higher frequency flame instabilities.
+
+#pagebreak()
