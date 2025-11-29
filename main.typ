@@ -111,3 +111,4 @@
 #include "lecture_9/lecture_9.typ"
 #include "lecture_10/lecture_10.typ"
 #include "lecture_11/lecture_11.typ"
+#include "lecture_12/lecture_12.typ"
