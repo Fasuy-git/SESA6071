@@ -112,3 +112,4 @@
 #include "lecture_10/lecture_10.typ"
 #include "lecture_11/lecture_11.typ"
 #include "lecture_12/lecture_12.typ"
+#include "lecture_13/lecture_13.typ"
