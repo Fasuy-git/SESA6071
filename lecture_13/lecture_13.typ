@@ -32,3 +32,4 @@ Note that as the plasma is quasineutral, the density of ions and electrons must 
 )<13-debye-length-figure>
 
 As a potential is applied across a plasma, the ions and electrons form a sheath around the cathode and anode respectively. This acts to neutralize the effect of the potential difference applied to the plasma. One key point is that the *debye length must be smaller than the size of the container* for the substance within it to be considered a plasma.
+#pagebreak()
