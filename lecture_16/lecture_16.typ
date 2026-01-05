@@ -302,7 +302,6 @@ Where $r$ is the radius of the discharge chamber and $B_Z_0$ is the initial axia
 
 Also known as electron cyclotron resonance ion thrusters, this type of thruster uses some of the same principles as a RIT but with the added benefit of cyclotron resonance. A schematic image of such a thruster is shown in *@16-mit*.
 
-
 #figure(
   image("images/16-MIT.png", width: 30%),
   caption: [Schematic image of a Microwave Ion Thruster.],
@@ -321,7 +320,6 @@ Microwave ion thrusters generate a plasma through the following mechanism:
   - Plasma production is much easier meaning high plasma density.
   - No internal electrodes needed.
   - Longer lifetime and excellent efficiencies.
-
 
 == Electron Bombardment Ion Thruster
 
@@ -350,3 +348,5 @@ All of the types of ion thrusters mentioned require grids to accelerate the ions
 - *Accelerator Grid*: This grid sits at a negative potential ($approx -200V - -500V$) and accelerates the ions forward when they enter the region between the screen grid and the accelerator grid.
 
 - *Decelerator Grid*: This grid sits at a neutral charge in order to repel or decelerate backflowing positively charged plume ions which would have otherwise collided with the accelerator grid and eroded it.
+
+#pagebreak()
