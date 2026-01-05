@@ -157,3 +157,196 @@ HETs stand out as the most dominant type of electric propulsion method used in s
 - Larger HETs come with the penalty of much greater power requirements.
 - Operating on different propellants without large performance loss.
 - The specific mechanisms behind Bohm diffusion and why electrons fall back to the anode.
+
+It is also important that the domination of Hall thrusters in the EP sector mean that R&D is taken away from other forms of EP.
+
+== Magnetoplasmadynamic (MPD) Thrusters
+
+These thrusters utilize both an electric field and an induced magnetic field to ionize and accelerate propellent. An image of such a thruster is shown in *@16-mpd*.
+
+#figure(
+  image("images/16-mpd.png", width: 69%),
+  caption: [Image of the anatomy of a MPD thruster.],
+  supplement: [Figure],
+  kind: figure,
+)<16-mpd>
+
+Note that an MPD is very similar to an arcjet, the main difference is the size of teh current applied. MPDs feature much higher currents which produce a self field which is not true in arcjets. MPD thrusters generate thrust through the following mechanism:
+
+- A very large current is applied between the anode and cathode ($10-100 k A$).
+- The applied voltage between the anode and cathode cause the propellent which is fed into the annular chanel to break down into a plasma.
+- The high plasma current generates a strong magnetic field, and the resulting Lorentz force ($F = J times B$) electromagnetically accelerates the plasma along and out of the channel, producing thrust.
+
+There exists two types of MPD, these are *self field* where the magnetic field is solely generated via the high current flow and *applied field* which generate a magnetic field using a solenoid magnet to create the magnetic field. A cross sectional image showing these two types is seen in  *@16-mpd-self-applied*.
+
+#figure(
+  image("images/16-mpd-self-applied.png", width: 80%),
+  caption: [Image of a self field MPD vs an applied field MPD. ],
+  supplement: [Figure],
+  kind: figure,
+)<16-mpd-self-applied>
+
+MPDs can achieve high efficiencies and high thrusts but require an incredibly high power draw. A comparison between MPDs ion thrusters and Hall effect thrusters is shown in *@16-mpd-comparison*.
+
+#figure(
+  table(
+    columns: 5,
+    fill: (col, row) => if row == 0 { gray } else { white },
+    align: center + horizon,
+    table.header[*Type*,][*Thrust Range (mN)*][*Isp Range (s)*][*Thruster Efficiency*][*Input Power Range (W)*],
+
+    [MPD], [0.001 - 20,000], [2000 - 5000+], [30 - 50], [2000 - 100,000+],
+    [Ion Thruster], [0.01 - 500], [1500 - 8000], [60 - 80], [400 - 4300],
+    [Hall Thruster], [0.01 - 2000], [1500 - 2000], [30 - 50], [1000 - 4500],
+  ),
+  caption: [MPD vs HET vs GIT performance.],
+)<16-mpd-comparison>
+
+MPDs do have some issues however, which limits their widespread use, these are:
+
+- Require very high power inputs to achieve high thrust and efficiencies.
+  Electrode erosion.
+- Very large electrical components.
+- Low efficiencies result in huge heat losses.
+- 'Onset' phenomena where instabilities occur at higher currents.
+
+== Pulsed Plasma Thrusters
+
+These are a simpler form of electromagnetic thruster in comparison to a HET or an MPD, an image of such a system is shown in *@16-ppt*.
+
+#figure(
+  image("images/16-ppt.png", width: 60%),
+  caption: [Schematic image of a PPT.],
+  supplement: [Figure],
+  kind: figure,
+)<16-ppt>
+
+PPTs produce thrust through the following mechanism:
+
+- The spark plug ablates a thin layer of the propellent block (Usually made of Teflon or PTFE).
+- The partially ionized ablated propellent flows between the two channels where a large current is applied.
+- The large current further ionizes the propellent as well as producing a strong self magnetic field.
+- The ionizes plasma is then accelerated through the channel through electromagnetic acceleration ($F = J times B$).
+
+Due to their simplicity and low voltage requirements, PPTs have very low thrusts and efficiencies. A comparison of PPT performance is shown in *@16-ppt-comparison*
+
+#figure(
+  table(
+    columns: 5,
+    fill: (col, row) => if row == 0 { gray } else { white },
+    align: center + horizon,
+    table.header[*Type*,][*Thrust Range (mN)*][*Isp Range (s)*][*Thruster Efficiency*][*Input Power Range (W)*],
+
+    [Resistojet], [200 - 300], [200 - 350], [65 - 90], [50 - 500],
+    [PPT], [0.05 - 10], [600 - 2000], [10], [10 - 100],
+    [MPD thruster], [0.001 - 20,000], [2000 - 5000], [30 - 50], [2000 - 100,000],
+  ),
+  caption: [PPT performance.],
+)<16-ppt-comparison>
+
+#pagebreak()
+
+#lecture("Into to Electrostatic Propulsion", 2, 9)
+
+Electrostatic thrusters accelerate electrons solely through an electric field, driven by a potential difference. The types of electrostatic thrusters covered in this section are:
+
+- Gridded Ion Thrusters (GIT)
+  - Radiofrequency Ion Thruster (RIT)
+  - Microwave Ion Thruster
+  - Electron Bombardment Ion Thruster (AKA Kaufman Ion Thruster)
+- Electrospray / FEEP thruster
+
+== Radiofrequency Ion Thruster
+
+In this type of ion thruster, the electrons are imparted energy via a radio frequency coil wrapped around the discharge chamber. A schematic diagram of such a thruster is shown in *@16-rit*.
+
+#figure(
+  image("images/16-RIT.png", width: 80%),
+  caption: [Schematic image of a RIT.],
+  supplement: [Figure],
+  kind: figure,
+)<16-rit>
+
+In a RIT a plasma is produced via the following mechanism:
+
+
+- An alternating current in the RF coil (frequency $approx$ 1 - 30 MHz) induces an *axial time varying magnetic field* in the discharge chamber.
+- Due to Faraday's law, this changing magnetic field induces *an azimuthal electric field* in the discharge chamber.
+- This induced electric field acts on the electrons, causing them to oscillate azimuthally with collisions converting the oscillatory motion into thermal energy through ohmic heating.
+- Hot electrons collide with neutrals ionizing them and increasing plasma density.
+- When the RF polarity is reversed, the direction of the electron movement is reversed which means the net effect on the electrons is heating not drift.
+
+An expression for the induced axial magnetic field can be derived and is shown in *@16-Bz*
+
+$
+  B_Z = (N I)/(mu_0) e^(i omega t)
+$<16-Bz>
+
+Where:
+
+- *$B_Z$*: Strength of the axial magnetic field ($T$).
+- *$N$*: Number of coils in the RF coil.
+- *$I$*: The current flow through the RF coil ($A$).
+- *$mu_0$*: The permeability of the vacuum = $4pi times 10^(-7) H "/"m$
+- *$t$*: Time (s)
+
+Utilizing Faraday's law and rearranging the resulting expression, an equation for the azimuthal electric field can be derived, this is shown in *@16-Etheta*.
+
+$
+  nabla times accent(E, ->) = -(partial accent(B, ->))/(partial t) quad --> quad E_theta = - (i omega r)/2 B_Z_0 e^(i omega t)
+$<16-Etheta>
+
+Where $r$ is the radius of the discharge chamber and $B_Z_0$ is the initial axial magnetic field.
+
+== Microwave Ion Thrusters
+
+Also known as electron cyclotron resonance ion thrusters, this type of thruster uses some of the same principles as a RIT but with the added benefit of cyclotron resonance. A schematic image of such a thruster is shown in *@16-mit*.
+
+
+#figure(
+  image("images/16-MIT.png", width: 30%),
+  caption: [Schematic image of a Microwave Ion Thruster.],
+  supplement: [Figure],
+  kind: figure,
+)<16-mit>
+
+Microwave ion thrusters generate a plasma through the following mechanism:
+
+- A microwave antenna injects microwaves (frequency $approx$ 2.4 - 2.8 GHz) into the discharge chamber.
+- As microwaves are an EM wave, an alternating magnetic and electric field are introduced.
+- The azimuthal electric field causing ohmic heating of the electrons in the same manner as a RIT just at a much higher frequency.
+- Due to a static magnetic field which produces a $B$ at a specific value corresponding to the Lamor radius, the electrons undergo Electron Cyclotron Resonance (ECR).
+- ECR means that:
+  - Electrons absorb energy very efficiently meaning low power plasma ignition.
+  - Plasma production is much easier meaning high plasma density.
+  - No internal electrodes needed.
+  - Longer lifetime and excellent efficiencies.
+
+
+== Electron Bombardment Ion Thruster
+
+This type of ion thruster utilizes a different mechanism to the RIT to generate a plasma. A schematic diagram showing an example of an electron bombardment ion thruster is shown in *@16-electron-bombardment*.
+
+#figure(
+  image("images/16-electron-bombardment.png", width: 60%),
+  caption: [Schematic image of an electron bombardment ion thruster.],
+  supplement: [Figure],
+  kind: figure,
+)<16-electron-bombardment>
+
+Electron bombardment ion thrusters generate a plasma utilizing the following mechanism:
+
+- A hollow cathode (electron gun) uses a small amount of propellent to introduce hot electrons into the discharge chamber.
+- These electrons then ionize neutrals forming a plasma.
+- As the ions accelerate out of the discharge chamber there develops a build up of electrons, therefore an anode is required on the walls to remove electrons.
+- As the electrons are very mobile they quickly get attracted to teh anode and the potential is lost, to combat this a magnetic field is used to impeded the motion of teh electrons as they approach teh anode.
+
+== Ion Thruster Grids
+
+All of the types of ion thrusters mentioned require grids to accelerate the ions within the plasma. Typically GITs consist of three grids, these are:
+
+- *Screen Grid*: Has a very high positive potential ($approx +1000V$). The plasma sits on the left side of the screen grid meaning that electrons are attracted to it forming a sheath ($w i d t h = lambda_D$). This sheath occludes the effect of the high positive potential to teh rest of the plasma.
+
+- *Accelerator Grid*: This grid sits at a negative potential ($approx -200V - -500V$) and accelerates the ions forward when they enter the region between the screen grid and the accelerator grid.
+
+- *Decelerator Grid*: This grid sits at a neutral charge in order to repel or decelerate backflowing positively charged plume ions which would have otherwise collided with the accelerator grid and eroded it.
