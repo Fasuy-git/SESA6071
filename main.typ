@@ -118,3 +118,4 @@
 #include "lecture_16/lecture_16.typ"
 #include "lecture_17/lecture_17.typ"
 #include "lecture_18/lecture_18.typ"
+#include "lecture_19/lecture_19.typ"
